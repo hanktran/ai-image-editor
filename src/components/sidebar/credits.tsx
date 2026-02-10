@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Coins, Sparkles } from "lucide-react";
-// import { getUserCredits } from "~/actions/users";
+import { getUserCredits } from "~/actions/users";
 
 export default async function Credits() {
-  // const credits = await getUserCredits();
+  const credits = await getUserCredits();
 
   return (
     <div className="group flex items-center gap-2">
@@ -13,7 +14,7 @@ export default async function Credits() {
         </div>
         <div className="flex flex-col">
           <span className="text-foreground text-sm font-bold transition-colors duration-200 group-hover:text-yellow-600">
-            {/* {credits} */}
+            {credits}
           </span>
           <span className="text-muted-foreground text-xs leading-tight">
             Credits

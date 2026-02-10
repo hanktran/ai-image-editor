@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { ReactNode } from "react";
 import { Providers } from "~/components/providers";
 import { Sparkles, ImageIcon, Zap, Target } from "lucide-react";
