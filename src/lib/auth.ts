@@ -1,6 +1,5 @@
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
-import { PrismaClient } from "@prisma/client";
 import { Polar } from "@polar-sh/sdk";
 import {
   polar,
@@ -19,9 +18,8 @@ const polarClient = new Polar({
   server: "sandbox",
 });
 
-const prisma = new PrismaClient();
 export const auth = betterAuth({
-  database: prismaAdapter(prisma, {
+  database: prismaAdapter(db, {
     provider: "postgresql",
   }),
   emailAndPassword: {
